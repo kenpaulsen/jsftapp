@@ -9,7 +9,7 @@
 # https://github.com/docker/awesome-compose
 services:
   app:
-    container_name: mirmic
+    container_name: peace
     build:
       context: .
       target: final
