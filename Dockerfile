@@ -61,11 +61,11 @@ ENV TOMCAT_NATIVE_LIBDIR $CATALINA_HOME/native-jni-lib
 ENV LD_LIBRARY_PATH ${LD_LIBRARY_PATH:+$LD_LIBRARY_PATH:}$TOMCAT_NATIVE_LIBDIR
 WORKDIR $CATALINA_HOME
 
-COPY webapp $APP_ROOT
-COPY target/deps $APP_ROOT/WEB-INF/lib
-COPY target/mirmic.jar $APP_ROOT/WEB-INF/lib/
+COPY app/webapp $APP_ROOT
+COPY app/target/deps $APP_ROOT/WEB-INF/lib
+COPY app/target/mirmic.jar $APP_ROOT/WEB-INF/lib/
 COPY freya/target/freya-theme-2.0.0.jar $APP_ROOT/WEB-INF/lib/
-COPY freya/target/freya-layout-2.0.0/resources/freya-layout webapp/resources/.
+COPY freya/target/freya-layout-2.0.0/resources/freya-layout $APP_ROOT/resources/.
 COPY tomcat/conf/* /usr/local/tomcat/conf/.
 
 # Remove big stuff we don't need
