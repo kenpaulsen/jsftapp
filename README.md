@@ -14,5 +14,5 @@ See [README-Docker.md](README-Docker.md) for details, but at a high level (for n
 1. docker compose build
 
 ### Run
-1. docker compose build
+1. docker compose up
 
