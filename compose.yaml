@@ -19,6 +19,9 @@ services:
     ports:
       - 80:8080
       - 443:8443
+    # When developing locally, you can define this volume
+    volumes:
+      - "./app/webapp:/usr/local/tomcat/webapps/ROOT"
 
     # The commented out section below is an example of how to define a PostgreSQL
     # database that your application can use. `depends_on` tells Docker Compose to
